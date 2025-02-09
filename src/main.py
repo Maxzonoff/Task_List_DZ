@@ -6,31 +6,33 @@ def main():
     4. Выход.""")
     print(menu)
     user = input('Выбери пункт меню:')
-    while user != '4':
-        print(menu)
-        user = input('Выбери пункт меню: ')
+
+    list_tasks = []
+
     if user == '1':
-        list_tasks()
+        print(list_tasks)
 
     if user == '2':
-        return create_task()
+        task = input('Создать задачу: ')
+        list_tasks += task
 
     if user == '3':
-        pass
+        list_tasks.pop(task)
+
+    if user == '4':
+        print(f'{menu}{user}')
 
 
 def add_task():
-    list_tasks = []
-    list_tasks += create_task()
+    pass
 
 
-def list_tasks(list_tasks):
-    print(list_tasks)
+def list_tasks():
+    pass
 
 
 def create_task():
-    task = input('Создать задачу: ')
-    return task
+    pass
 
 
 def del_task():
